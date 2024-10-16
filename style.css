@@ -1,0 +1,197 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#page1{
+    width: 100%;
+    height: 100vh;
+    background-color: #DCD7C9;
+}
+#page2{
+    width: 100%;
+    height: 100vh;
+    background-color: #DCD7C9;
+}
+#page3{
+    width: 100%;
+    height: 100vh;
+    background-color: #DCD7C9;
+}
+
+#navbar #logo img{
+    scale:1.2;
+}
+
+nav{
+    position: absolute;
+    width: 100%;
+}
+
+#navbar{
+    width: 100%;
+    height: 15vh;
+    background-color: #2C3639;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#navbar #options a{
+    color: #DCD7C9;
+    text-decoration: none;
+    padding: 5.5vh 1.5vw;
+    font-family: "Aleo", serif;
+    font-size: 20px;
+}
+
+#navbar #options a:hover{
+    color: #dcd7c975;
+}
+
+@media only screen and (max-width:850px){
+    
+} 
+
+#navbar #buttons{
+    display: flex;
+    gap: 1.5vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar #buttons button:nth-child(1){
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #DCD7C9;
+    color: #2C3639;
+    font-family: "Aleo", serif;
+    font-size: 15px;
+}
+
+#navbar #buttons span{
+    color: #DCD7C9;
+    font-family: "Aleo",serif;
+}
+
+#navbar #buttons span:nth-child(3){
+    display: none;
+}
+
+@media only screen and (max-width:850px){
+    #navbar #options{
+        display: none;
+    }
+    #navbar #buttons span:nth-child(3){
+        display: inline-block;
+    }
+} 
+
+nav #scrolldown{
+    width: 100%;
+    height: 0;
+    background-color:#2C3639;
+    color:#DCD7C9;
+    font-family: "Aleo", serif;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+nav #scrolldown #scrolldown_content{
+    padding: 20px 0px;
+    width: 40vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+
+nav #scrolldown #scrolldown_content .scrolldown_item{
+    font-size: 15px;
+    color: #dcd7c9a4;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+
+nav #scrolldown #scrolldown_content .scrolldown_item:hover{
+    font-size: 15px;
+    color: #dcd7c9a4;
+    background-color: rgba(128, 128, 128, 0.397);
+    cursor: pointer;
+}
+
+nav #scrolldown #scrolldown_content .scrolldown_item:nth-child(11):hover{
+    background-color:#2C3639;
+    cursor:auto;
+}
+
+#main #page1 #sidebar{
+    height: 85vh;
+    width: 70vw;
+    right: 0;
+    transform: translateX(100%);
+    position: absolute;
+    top: 15vh;
+    background-color:#2C3639;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* visibility: hidden; */
+}
+@media only screen and (min-width:850px){
+    #main #page1 #sidebar{
+        visibility: hidden;
+    }
+} 
+
+
+
+#main #page1 #sidebar #sidebar_content{
+    width: 35vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #DCD7C9;
+    font-family: "Aleo",serif;
+    gap: 5vh;
+    font-size: 20px;
+}
+
+#main #page1 #sidebar #sidebar_content .sidebar_items:hover{
+    color: #dcd7c9a4;
+    background-color: rgba(128, 128, 128, 0.397);
+    border-radius: 5px;
+}
+
+#main #page1 #sidebar #sidebar_content .sidebar_items{
+    padding: 5px 5px;
+}
+
+@media only screen and (max-width:540px){
+    #navbar #buttons{
+       scale:0.7;
+       gap: 3vw;
+    }
+    #navbar #logo img{
+        scale:0.7;
+    }
+    #navbar {
+        height: 10vh;
+    }
+    #main #page1 #sidebar{
+        height: 90vh;
+        top: 10vh;
+    }
+} 
