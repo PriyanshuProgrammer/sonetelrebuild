@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -7,40 +6,48 @@
     box-sizing: border-box;
 }
 
+
 html, body {
-    height: 100%;
+    overflow-x: hidden;
     width: 100%;
 }
 
+#main{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+
 #page1{
+    position: relative;
+    z-index: 0;
     width: 100%;
-    height: 100vh;
-    background-color: #DCD7C9;
+    min-height: 100vh;
+    background-image: linear-gradient(to right,#23222b ,#DCD7C9);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
 }
-#page2{
-    width: 100%;
-    height: 100vh;
-    background-color: #DCD7C9;
-}
-#page3{
-    width: 100%;
-    height: 100vh;
-    background-color: #DCD7C9;
-}
+
+
 
 #navbar #logo img{
     scale:1.2;
 }
 
 nav{
-    position: absolute;
+    position:relative;
     width: 100%;
+    z-index: 10;
 }
 
 #navbar{
     width: 100%;
     height: 15vh;
-    background-color: #2C3639;
+    background-color: #23222b;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -64,7 +71,7 @@ nav{
 
 #navbar #buttons{
     display: flex;
-    gap: 1.5vw;
+    gap: 3.5vw;
     justify-content: center;
     align-items: center;
 }
@@ -88,25 +95,21 @@ nav{
     display: none;
 }
 
-@media only screen and (max-width:850px){
-    #navbar #options{
-        display: none;
-    }
-    #navbar #buttons span:nth-child(3){
-        display: inline-block;
-    }
-} 
+
 
 nav #scrolldown{
-    width: 100%;
+    width: 100vw;
     height: 0;
-    background-color:#2C3639;
+    background-color:#23222b;
+    backdrop-filter:blur(10px);
     color:#DCD7C9;
     font-family: "Aleo", serif;
     font-size: 17px;
     display: flex;
     justify-content: center;
     overflow: hidden;
+    position: absolute;
+    z-index: 10;
 }
 
 nav #scrolldown #scrolldown_content{
@@ -132,7 +135,7 @@ nav #scrolldown #scrolldown_content .scrolldown_item:hover{
 }
 
 nav #scrolldown #scrolldown_content .scrolldown_item:nth-child(11):hover{
-    background-color:#2C3639;
+    background-color:transparent;
     cursor:auto;
 }
 
@@ -142,7 +145,7 @@ nav #scrolldown #scrolldown_content .scrolldown_item:nth-child(11):hover{
     right: 0;
     transform: translateX(100%);
     position: absolute;
-    top: 15vh;
+    z-index: 10;
     background-color:#2C3639;
     display: flex;
     justify-content: center;
@@ -192,6 +195,491 @@ nav #scrolldown #scrolldown_content .scrolldown_item:nth-child(11):hover{
     }
     #main #page1 #sidebar{
         height: 90vh;
-        top: 10vh;
     }
 } 
+
+#page1 #page1_content{
+    padding-top: 20vh;
+    width: 70vw;
+}
+
+#page1 #page1_content h1 {
+    font-size: 50px;
+    color:white;
+    font-family: "Aleo", serif;
+
+}
+#page1 #page1_content h3 {
+    color:white;
+    font-family: "Aleo", serif;
+    padding-top: 5vh;
+}
+
+#page1> img {
+    width: 50vw;
+    height: 80vh;
+    position: absolute;
+    z-index: -1;
+    top: 22vh;
+    right: -10vw;
+}
+
+
+#page2{
+    background-color: #23222b;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#page2 #page2_content{
+   padding: 10vh 0;
+    width: 70vw;
+    height: 100%;
+    margin-inline: auto;
+}
+
+
+#page2 #page2_content h1{
+    font-family: "Aleo",serif;
+    width: 100%;
+    color: #DCD7C9;
+    font-size: 50px;
+}
+
+#page2 #page2_content h3{
+    font-family: "Aleo",serif;
+    width: 100%;
+    color: #dcd7c9a8;
+    padding-top: 5vh;
+}
+
+
+
+
+#page2 #page2_content #page2_form > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DCD7C9;
+    padding: 2.5vh 0;
+    margin-top: 5vh;
+    border-radius: 20px;
+}
+
+#page2 #page2_content #page2_form > div:nth-child(4){
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color:#ad2b2b;
+    color: #DCD7C9;
+    padding: 2.5vh 0;
+    margin-top: 5vh;
+}
+
+#page2 #page2_content #page2_form >div:hover{
+    cursor: pointer;
+}
+
+#page2 #page2_content #page2_form >div:nth-child(4):hover{
+    cursor: pointer;
+    background-color: #ad2b2bb9;
+}
+
+#page2 #infiniteboxes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-direction: row;
+}
+
+#page2 #infiniteboxes .box{
+    width: 20vw;
+    flex-shrink: 0;
+    height: 20vw;
+    background-image: url("sonetelimages/globe.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 10px 10px;
+    border-radius:5%;
+    box-shadow: rgba(255, 255, 255, 0.507) 0px 7px 29px 0px;
+    font-family: "Aleo",serif;
+    text-align: center;
+}
+
+#page2 #infiniteboxes .box h3:first-child{
+    color: rgba(255, 255, 255, 0.623);
+    font-size: small;
+    
+}
+
+#page2 #infiniteboxes .box h3:nth-child(2){
+    padding-top: 10%;
+}
+
+#page2 #infiniteboxes .box p{
+    padding-top: 10%;
+}
+
+#page2 > h1{
+    color: white;
+    font-family: "Aleo",serif;
+    /* font-size: large; */
+    padding-top: 10vh;
+    text-align: center;
+}
+
+
+
+
+/* page3--------==================================================================================== */
+
+#page3{
+    background-color:#23222b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+#page3 #odometercontainer{
+    padding: 10vh 0;
+    display: flex;
+    justify-content: center;
+    color: #DCD7C9;
+    font-family: "Aleo",serif;
+    gap: 2.5vw;
+    flex-shrink: 0;
+    height: 5vh;
+}
+
+#page3 #odometercontainer span{
+    font-size: 50px;
+}
+#page3 #odometercontainer h1{
+    font-size: 50px;
+}
+
+#page1 #page1_content #page1_content_images{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    gap: 5vw;
+    visibility: hidden;
+    
+}
+
+#page1 #page1_content #page1_content_images img{
+    width: 20vw;
+    height: 40vh;
+    border-radius: 10px;
+    box-shadow: 5px 10px #dad6d6;
+}
+
+
+
+#page3 #para{
+    /* color: rgba(255, 255, 255, 0.466); */
+    width: 70vw;
+    font-size: 35px;
+    font-family: "Aleo",serif;
+    padding: 10% 0;
+    color: white;
+}
+
+#page4{
+    width: 100%;
+    min-height: 100vh;
+    background-color:#23222b;
+}
+
+#page4 #page4container{
+    max-width: 70vw;
+    margin-inline: auto;
+    height: 100vh;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    position: relative;
+}
+
+#page4 #textsummary{
+    width:80%;
+    height: 70vh;
+    border-radius: 10px;
+    box-shadow: rgb(234 9 255 / 45%) 0px 7px 29px 0px;
+    background-color: #a5bceb;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: "Aleo", serif;
+    color: #05105a;
+    position: relative;
+}
+
+#page4 #textsummary h1{
+    width: 58%;
+    padding: 10px 2vw;
+}
+#page4 #textsummary p{
+    width: 58%;
+    padding-right: 1vw;
+    padding-left: 7vw;
+    opacity: 0.5;
+}
+
+#page4 #textsummary div{
+    width: 150px;
+    height: 55px;
+    position: absolute;
+    z-index: 10;
+    bottom: 10vh;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #a81052;
+    display: grid;
+    place-content: center;
+    color: white;
+    border-radius: 10px;
+}
+
+#page4 #textsummary div:hover{
+    cursor: pointer;
+    background-color:#a81052a9;
+}
+
+#page4 #page4container #img1{
+    width: 40vw;
+    height: 30vw;
+    position: absolute;
+    left: -20vw;
+    bottom: 0;
+}
+
+#page4 #page4container #img2{
+    width: 40vw;
+    height: 22vw;
+    position: absolute;
+    right: -10vw;
+    top: 0;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.521) 0px 7px 29px 0px;
+}
+
+#page5{
+    width: 100%;
+    padding-top: 1px;
+    /* min-height: 100vh; */
+    height: auto;
+    background-color:#23222b;
+    font-family: "Aleo",serif;
+    color: white;
+}
+
+#page5 #page5container{
+    margin-top: 10px;
+    margin-inline:auto;
+    width: 70vw;
+
+}
+
+#page5 #page5container #news{
+    width: 100%;
+    display: flex;
+    margin-top: 10vh;
+    gap: 10%; 
+}
+
+#page5 #page5container #news .news1{
+    width: 30%;
+    overflow: visible;
+}
+
+#page5 #page5container #news .news1 img{
+    width: 100%;
+    height: 30vh;
+}
+
+#page5 #page5container #news .news1 h2{
+    padding-top: 2vh;
+    text-align: center;
+}
+
+#page5 #page5container #news .news1 p{
+    padding-top: 2vh;
+    text-align: center;
+    opacity: 0.5;
+}
+
+
+
+#page6{
+    width: 100%;
+    min-height: 100vh;
+    background-color:#23222b;
+    position: relative;
+}
+
+#page6 #scalebox{
+    width: 50vw;
+    height: 50vh;
+    background-color: #cbd0f1;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    font-family: "Aleo",serif;
+    color: black;
+    padding-top: 7vh;
+    padding-left: 7vw;
+    display: grid;
+    grid-template-columns: 5vw auto auto auto auto;
+    overflow: hidden;
+    
+}
+#page6 #scalebox .cols{
+    display: flex;
+    flex-direction: column;
+}
+#page6 #scalebox #col5{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 2vh;
+    font-size: larger;
+    
+}
+
+#page6 #scalebox #col5 i:hover{
+    cursor: pointer;
+    color: blue;
+}
+
+#page6 #scalebox p{
+    margin-top: 2vh;
+    color: rgba(0, 0, 0, 0.685);
+}
+
+#page6 #scalebox p:hover{
+    cursor: pointer;
+}
+
+@media only screen and (max-width:1280px) {
+    #page1 > img{
+        visibility: hidden;
+    }
+    #page1 #page1_content{
+        padding-top: 10vh;
+        width: 70vw;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    #page3 #odometercontainer{
+        flex-direction: column;
+        gap:0;
+        text-align: center;
+    }
+    #page3 #odometercontainer span{
+        font-size: 30px;
+    }
+    #page3 #odometercontainer h1{
+        font-size: 30px;
+    }
+    #page1 #page1_content #page1_content_images{
+        visibility: visible;
+        padding: 10vh 5vw;
+
+    }
+    
+}
+
+
+
+@media only screen and (max-width:850px){
+    #navbar #options{
+        display: none;
+    }
+    #navbar #buttons span:nth-child(3){
+        display: inline-block;
+    }
+
+    #page1 #page1_content{
+        font-size: 25px;
+    }
+    #page1 #page1_content{
+        width: 90vw;
+    }
+    #page1 #page1_content h3{
+        width: 100%;
+    }
+    #page1 #page1_content #page1_content_images{
+        flex-direction: column;
+        width: 80vw;
+    }
+    #page1 #page1_content #page1_content_images img{
+        width: 100%;
+        height: 60vh;
+        border-radius: 10px;
+        box-shadow: 5px 10px #dad6d6;
+    }
+    #page2 #infiniteboxes {
+        flex-direction: column;
+        width: 80vw;
+        height: 70vh ;
+        overflow: scroll;
+        margin-inline: auto;
+    }
+    #page2 #infiniteboxes .box {
+        width: 50vw;
+        height: 50vw;
+        box-shadow: none;
+    }
+    #page3 #para{
+        font-size: medium;
+    }
+    #page4 #page4container #img1{
+        visibility: hidden;
+    }
+    #page4 #page4container #img2{
+        visibility: hidden;
+    }
+    #page4 #textsummary h1{
+        width: 100%;
+        padding: 3vw;
+        font-size: small;
+    }
+    #page4 #textsummary p{
+        width: 100%;
+        padding: 3vw;
+        opacity: 0.5;
+    }
+    #page4 #textsummary{
+        width:100%;
+    }
+    #page5 #page5container #news{
+        flex-direction: column;
+        gap: 5vw;
+    }
+    #page5 #page5container #news .news1{
+        width: 100%;
+    }
+    #page6 #scalebox{
+        grid-template-columns:  auto auto;
+    }
+    #page6 #scalebox #col5{
+        display: none;
+    }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odometer Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/odometer@0.4.8/themes/odometer-theme-default.css" />
+    <style>
+        .odometer {
+            font-size: 2em;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="odometer" id="my-odometer">0</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/odometer@0.4.8/odometer.min.js"></script>
+    <script>
+        // Animate the number after a short delay
+        setTimeout(function() {
+            document.getElementById('my-odometer').innerHTML = 12345;
+        }, 1000);
+    </script>
+    
+</body>
+</html>
