@@ -117,36 +117,7 @@ sidebartoggle.addEventListener("click",()=>{
 
 
 
-if(getComputedStyle(document.querySelector("#page2 #infiniteboxes")).flexDirection !== "column"){
-    gsap.to("#page2 #infiniteboxes",{
-        transform:"translateX(-200%)",
-        scrollTrigger:{
-            trigger:"#page2 ",
-            scroller:"body",
-            scrub:2,
-            pin:true,
-            end:"top -200%"
-        }
-    });
-    document.querySelectorAll("#page2 #infiniteboxes div").forEach((div)=>{
-        div.addEventListener("mouseenter",()=>{
-            gsap.to(div,{
-                scale:1.2,
-                duration:0.5,
-                position:"relative",
-                zIndex:10,
-            })
-        })
-        div.addEventListener("mouseleave",()=>{
-            gsap.to(div,{
-                scale:1,
-                duration:0.5,
-                position:"static",
-                zIndex:0,
-            })
-        })
-    })
-}
+
 
 
 let scrollpara = "We believe that globalization and entrepreneurship are key drivers for making this planet a better place.By empowering entrepreneurs in the most remote corners of the world, with a communication solutions that remove distance and levels the playing field, we hope to contribute to this progress.About 200,000 out of those that have signed up – across 170 countries – have also become paying customers."
